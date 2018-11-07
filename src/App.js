@@ -1,44 +1,39 @@
 import React, { Component } from 'react';
 import './App.css';
-import NewComponent from "./NewComponent";
+import MainView from "./MainView";
 
 class App extends Component {
   constructor() {
     super();
 
-    this.state = {
-        name: 'Vasia',
-        counter: 0
-    };
+    // this.state = {
+    //     name: 'Vasia',
+    //     counter: 0
+    // };
   }
 
-  onClick = () => {
-    const { name, counter } = this.state;
-
-    if(name === 'Vasia') {
-        this.setState({
-            name: 'Masia',
-            counter: counter + 1
-        });
-    } else {
-        this.setState({
-            name: 'Vasia',
-            counter: counter + 1
-        });
-    }
-  };
+  // onClick = () => {
+  //   const { name, counter } = this.state;
+  //
+  //   if(name === 'Vasia') {
+  //       this.setState({
+  //           name: 'Masia',
+  //           counter: counter + 1
+  //       });
+  //   } else {
+  //       this.setState({
+  //           name: 'Vasia',
+  //           counter: counter + 1
+  //       });
+  //   }
+  // };
 
   render() {
-    const { name, counter } = this.state;
+    // const { name, counter } = this.state;
 
     return (
       <div className="App">
-          {
-            counter < 10 ? (
-              <NewComponent name={name} counter={counter} />
-            ) : null
-          }
-          <button onClick={this.onClick} >{name}</button>
+          <MainView />
       </div>
     );
   }
