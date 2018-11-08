@@ -1,9 +1,20 @@
 .Person{
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
 }
 .PersonList{
     display: flex;
     flex-direction: column;
+}
+#btn-new-person{
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    border-radius: 20px;
+    width: 30px;
+    height: 30px;
+    background: chartreuse;
+    font-size: 20px;
+    border: none;
 }

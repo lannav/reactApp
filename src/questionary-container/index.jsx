@@ -41,17 +41,18 @@ class Questionary extends Component {
         const{ persons, isModalActive } = this.state;
 
         let personsList = [];
-        persons.forEach(person => personsList.push(<div className="Person"><p>{person.firstName} {person.lastName}: {person.phone}</p></div>));
+        persons.forEach(person => personsList.push(<div className="Person"><p>{person.firstName}</p><p>{person.lastName}</p><p>{person.phone}</p></div>));
         return(
-            <div className="PersonList">
-                {personsList}
-                <button onClick={this.setModal}>New person</button>
-                {isModalActive ? (
-                    <Area>
-                        <Dialog onClickHandler={this.handleClick}/>
-                    </Area>
+                <div className="PersonList">
+                    <div className="Person"><p>First name</p><p>Last name</p><p>Answer</p></div>
+                    {personsList}
+                    {isModalActive ? (
+                        <Area>
+                            <Dialog onClickHandler={this.handleClick}/>
+                        </Area>
                     ) : null}
-            </div>
+                    <button id="btn-new-person" onClick={this.setModal}>+</button>
+                </div>
         );
     }
 }
