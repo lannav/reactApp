@@ -1,16 +1,17 @@
 import React, { Component } from 'react';
 import './App.css';
 import MainView from "./MainView";
+import Modal from "./Modal";
 
 class App extends Component {
-  constructor() {
-    super();
-
-    // this.state = {
-    //     name: 'Vasia',
-    //     counter: 0
-    // };
-  }
+  // constructor() {
+  //   super();
+  //
+  //   // this.state = {
+  //   //     name: 'Vasia',
+  //   //     counter: 0
+  //   // };
+  // }
 
   // onClick = () => {
   //   const { name, counter } = this.state;
@@ -32,9 +33,11 @@ class App extends Component {
     // const { name, counter } = this.state;
 
     return (
-      <div className="App">
-          <MainView />
-      </div>
+        <main className="content">
+            <p>Lorem ipsum paragraph <Modal />...</p>
+            <p>Lorem ipsum paragraph...</p>
+            <p>Lorem ipsum paragraph...</p>
+        </main>
     );
   }
 }

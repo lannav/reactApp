@@ -1,27 +1,35 @@
 import React, { Component } from 'react';
-
+import './MainView.css';
 
 class MainView extends Component {
     constructor(props) {
         super(props);
 
+        //mock
+        this.state = {
+            persons: [
+                {"firstName": "Vasia", "lastName": "Pupkin", "phone": "1111111111"},
+                {"firstName": "Masia", "lastName": "Popkin", "phone": "2222222222"},
+                {"firstName": "Kasia", "lastName": "Dupkin", "phone": "3333333333"},
+                {"firstName": "Dasia", "lastName": "Kupkin", "phone": "4444444444"}
+                ]
+        };
+
         console.log("constructor");
     }
 
     render() {
-        const { ...persons } = this.props;
+        const { persons } = this.state;
 
-        let rows = null;
-        if (persons && persons.length > 0)
-            persons.forEach(person => rows += <tr>
-                <td>
-                    {person.firstName + " " + person.lastName + ": " + person.phone}
-                </td>
-            </tr>);
+        let rows = [];
+        if (persons.length > 0)
+            persons.forEach(person => rows.push(<tr><td>{`${person.firstName} ${person.lastName}, phone number: ${person.phone}`}</td></tr>));
         return (
             <div>
                 <table>
+                    <tbody>
                     {rows}
+                    </tbody>
                 </table>
                 <button onClick={this.createNewPerson}>+</button>
             </div>
