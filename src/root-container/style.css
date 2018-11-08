@@ -1,0 +1,18 @@
+#body{
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+}
+#app-root {
+  height: 500px;
+  width: 500px;
+  background: lightblue;
+  overflow: hidden;
+  position: absolute;
+  top: 25%;
+  left: 37%;
+}
+#modal-root {
+  position: relative;
+  z-index: 999;
+}

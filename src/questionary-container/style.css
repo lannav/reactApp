@@ -1,0 +1,9 @@
+.Person{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.PersonList{
+    display: flex;
+    flex-direction: column;
+}
